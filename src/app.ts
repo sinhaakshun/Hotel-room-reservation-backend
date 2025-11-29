@@ -8,8 +8,7 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 app.use(cors({
-  origin: "http://localhost:5173", // Replace with your frontend URL
-  credentials: true,               // if you need cookies/auth
+  origin: "*",
 }));
 
 const db = MongoDB.getInstance();
